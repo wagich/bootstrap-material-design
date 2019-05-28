@@ -278,9 +278,9 @@
   }
 
   // floating focused/filled will look like static
-  &.is-focused,
+  #{if(&, "&", "*")}.is-focused,
   .is-focused,
-  &.is-filled,
+  #{if(&, "&", "*")}.is-filled,
   .is-filled {
     .bmd-label-floating {
       @include bmd-label-static($label-static-top, $static-font-size);
