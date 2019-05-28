@@ -32,7 +32,7 @@
 
 @mixin bmd-drawer-y-out($size) {
   @each $side, $abbrev in (top: t, bottom: b) {
-    &.bmd-drawer-f-#{$abbrev} {
+    #{if(&, "&", "*")}.bmd-drawer-f-#{$abbrev} {
       > .bmd-layout-drawer {
         // position
         #{$side}: 0;
